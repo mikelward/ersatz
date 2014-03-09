@@ -5,6 +5,7 @@
  * hints that are left in the windows by the commands
  */
 
+#include <stdlib.h>
 #include <string.h>
 #include "estruct.h"
 #include "edef.h"
@@ -100,7 +101,6 @@ void mlerase ()
 void vtinit ()
 {
   VIDEO *vp;
-  char *malloc ();
   int i;
 
   (*term.t_open) ();

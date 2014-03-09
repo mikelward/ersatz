@@ -47,7 +47,6 @@ LINE* lalloc (int used)
 {
   LINE *lp;
   int size;
-  char *malloc ();
 
   size = (used + NBLOCK - 1) & ~(NBLOCK - 1);
   if (size == 0)	       /* Assume that an empty */
@@ -469,8 +468,6 @@ void kdelete ()
  */
 int kinsert (int c)
 {
-  char *realloc ();
-  char *malloc ();
   char *nbufp;
 
   if (kused == ksize)
