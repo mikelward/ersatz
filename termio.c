@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <stdio.h>		/* puts(3), setbuffer(3), ... */
+#include <stdlib.h>
 #include <sys/ioctl.h>		/* to get at the typeahead */
 
 void ttopen ();
