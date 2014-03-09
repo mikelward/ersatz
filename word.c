@@ -4,6 +4,7 @@
  * paragraph mode commands, they are likely to be put in this file
  */
 
+#include <ctype.h>
 #include "estruct.h"
 #include "edef.h"
 
@@ -273,6 +274,7 @@ int inword ()
   if (curwp->w_doto == llength (curwp->w_dotp))
     return (FALSE);
   c = lgetc (curwp->w_dotp, curwp->w_doto);
+  return !isspace(c);
   if (c >= 'a' && c <= 'z')
     return (TRUE);
   if (c >= 'A' && c <= 'Z')
